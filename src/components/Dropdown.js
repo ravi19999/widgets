@@ -23,6 +23,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
             <div
                 key={option.value}
                 className="item"
+                style={{'background-color':`${option.value}`}}
                 onClick={() => onSelectedChange(option)}
             >
                 {option.label}
@@ -32,7 +33,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
 
     return (
         <div ref={ref} className="ui form">
-            <div className="field">
+            <div className="field" style={{'backgroundColor':`${selected.value}`}}>
                 <label className="label">Select a Color</label>
                 <div
                     onClick={() => setOpen(!open)}
@@ -47,6 +48,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
                     </div>
                 </div>
             </div>
+            <div style={{'color':`${selected.value}`}}><h1>{selected.label}</h1></div>
         </div>
     );
 };

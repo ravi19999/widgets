@@ -20,6 +20,7 @@ const options = [
     value: "blue",
   },
 ];
+
 const items = [
   {
     title: "What is React?",
